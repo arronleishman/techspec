@@ -48,3 +48,22 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Authentication
+
+This project uses [Firebase Authentication](https://firebase.google.com/docs/auth) for login. Update `firebaseConfig.ts` with your Firebase project credentials. The app starts by checking the current authentication state and redirects to the login screen if the user is not signed in.
+
+Credentials are read from `firebaseConfig.ts`:
+
+```ts
+const firebaseConfig = {
+  apiKey: 'YOUR_API_KEY',
+  authDomain: 'YOUR_AUTH_DOMAIN',
+  projectId: 'YOUR_PROJECT_ID',
+  storageBucket: 'YOUR_STORAGE_BUCKET',
+  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+  appId: 'YOUR_APP_ID',
+};
+```
+
+Replace these placeholders with your project's values before running the app.
